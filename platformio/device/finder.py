@@ -170,7 +170,7 @@ class SerialPortFinder:
                 return item.device
         candidates = sorted(candidates, key=lambda item: item.device)
         # first port is GDB? BlackMagic, ESP-Prog
-        print("_reveal_device_port", candidates, self.prefer_gdb_port)
+        print("_reveal_device_port", [item.device for item in candidates], self.prefer_gdb_port)
         return candidates[0 if self.prefer_gdb_port else -1].device
 
     def _find_blackmagic_port(self):
