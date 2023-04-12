@@ -147,8 +147,6 @@ def build_contrib_pysite_package(target_dir, with_metadata=True):
         "-t",
         target_dir,
     ]
-    if "linux" in systype:
-        args.extend(["--no-binary", ":all:"])
     try:
         subprocess.run(args + get_contrib_pysite_deps(), check=True, env=os.environ)
     except subprocess.CalledProcessError as exc:
