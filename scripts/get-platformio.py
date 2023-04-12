@@ -17,7 +17,7 @@ import io
 import sys
 import subprocess
 
-MAIN_SCRIPT_URL = "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py"
+MAIN_SCRIPT_URL = "https://github.com/skuldslerMC/platformio-core/raw/develop/scripts/get-platformio.py"
 
 
 def download_with_requests(url, dst):
